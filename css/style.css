@@ -1,63 +1,83 @@
 
 body {
-    background-color: #f0f2f5; 
-    color: #333333; 
-    font-family: sans-serif; 
-    margin: 30px; 
+    background-color: #0b0f19; 
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: #1a365d; 
+.barra-topo {
+    background-color: #0f1626;
+    padding: 15px;
+    border-bottom: 2px solid #334155;
 }
 
-h3 {
-    color: #2b6cb0;
-    margin-top: 20px;
+.esquerda {
+    float: left;
 }
 
-input, select {
-    padding: 6px;
-    margin-top: 5px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+.foto-logo {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
-button {
-    background-color: #2b6cb0;
-    color: white;
+.direita {
+    float: right;
+}
+
+.direita a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.caixa-banner {
+    background-color: #0f1626;
+    border: 2px solid #334155;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    clear: both; 
+}
+
+.bloco-quadrados {
+    text-align: center;
+    margin: 20px;
+}
+
+.foto-quadrada {
+    width: 90px;
+    height: 90px;
+    border: 2px solid #334155;
+    margin: 5px;
+}
+
+.linhas-texto {
+    margin: 20px;
+    background-color: #0f1626;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+.mensagem-erro {
+    color: #ff4d4d;
+    background-color: #3a0000;
+    padding: 8px;
     font-weight: bold;
 }
 
-button:hover {
-    background-color: #1a365d; 
+.verde { color: #00ff00; font-weight: bold; }
+.vermelho { color: #ff4d4d; font-weight: bold; }
 
-ul {
-    padding-left: 20px;
+.base-tabela {
+    margin: 20px;
 }
 
-li {
-    margin-bottom: 10px;
-}
-
-.texto-azul {
-    color: blue;
-    font-weight: bold;
-}
-
-.texto-vermelho {
-    color: red;
-    font-weight: bold;
-}
-
-.alerta-erro {
-    background-color: #fff5f5;
-    color: #c53030;
-    border: 1px solid #feb2b2;
-    padding: 10px;
-    border-radius: 4px;
-    font-weight: bold;
+table {
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #0f1626;
 }
