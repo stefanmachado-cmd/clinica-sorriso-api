@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema da Clinica - Dr. Roberto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <center>
+        <h1>SORRISO METÁLICO</h1>
+        <p>Acesso do Administrador: Dr. Roberto</p>
+        <hr>
+    </center>
+
+    <h3>1. Cadastro e Nível de Acesso</h3>
+    <form onsubmit="return false;">
+        <p>
+            <label>CPF do Paciente:</label><br>
+            <input type="text" placeholder="000.000.000-00">
+        </p>
+        <p>
+            <label>Nome Completo:</label><br>
+            <input type="text" size="40">
+        </p>
+        <p>
+            <label>Tipo de Cliente:</label><br>
+            <select id="campoTipo" onchange="verificarBloqueio()">
+                <option value="VIP">VIP</option>
+                <option value="comum">Comum</option>
+            </select>
+        </p>
+        <p>
+            <button onclick="alert('Ficha aberta!')">Abrir Ficha Clínica</button>
+        </p>
+    </form>
+
+    <hr>
+
+    <h3>2. Controle de Horários (Agenda)</h3>
+    <p>Aviso: Sábados de manhã são exclusivos para VIPs.</p>
+    
+    <ul>
+        <li>
+            <b>Sábado (08:00 às 12:00):</b> 
+            <span id="txtSabado" class="texto-azul">Liberado apenas para VIP</span>
+        </li>
+        <li>
+            <b>Segunda a Sexta (14:00):</b> 
+            <span>Livre para qualquer paciente</span>
+        </li>
+    </ul>
+
+    <p id="mensagemErro" class="alerta-erro" style="display: none;">
+        ATENÇÃO RECEPÇÃO: Paciente comum não pode agendar no Sábado!
+    </p>
+
+    <hr>
+
+    <h3>3. Consulta Rápida (Último Procedimento)</h3>
+    
+    <p>
+        <b>Dente Tratado:</b> Elemento 24 🦷 <br>
+        <b>Procedimento realizado:</b> Ajuste de Bríquete <br>
+        <b>Informação da Cadeira 3:</b> Paciente já estava anestesiado ontem. <br>
+        <i>Nota: Sem burocracia no atendimento.</i>
+    </p>
+
+    <hr>
+
+    
+    <center>
+        <p>Sorriso Metálico S/A — Dr. Roberto CEO</p>
+    </center>
+
+    <script>
+        function verificarBloqueio() {
+            var tipo = document.getElementById('campoTipo').value;
+            var erro = document.getElementById('mensagemErro');
+            var sabado = document.getElementById('txtSabado');
+
+            if (tipo == 'comum') {
+                erro.style.display = 'block';
+                sabado.innerHTML = 'BLOQUEADO';
+                sabado.className = 'texto-vermelho';
+            } else {
+                erro.style.display = 'none';
+                sabado.innerHTML = 'Liberado apenas para VIP';
+                sabado.className = 'texto-azul';
+            }
+        }
+    </script>
+</body>
+</html>
